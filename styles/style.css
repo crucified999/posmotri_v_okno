@@ -18,6 +18,7 @@ html {
   background-color: #1b1919;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -159,7 +160,8 @@ fieldset {
 
 .content__list {
   position: relative;
-  max-height: 298px;
+  height: 298px;
+  width: 399px;
   overflow: auto;
 }
 
@@ -168,17 +170,12 @@ fieldset {
   height: 100%;
 }
 
-.content__card-link {
-  text-decoration: none;
-  color: white;
-  margin: 2px;
-}
-
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
@@ -208,7 +205,7 @@ fieldset {
   margin-bottom: 16px;
 }
 
-.content__list-item {
+.content__list-item:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
@@ -227,6 +224,8 @@ fieldset {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card:hover .content__video-card-description-container {
@@ -248,6 +247,9 @@ fieldset {
 
 .content__card-link {
   display: block;
+  text-decoration: none;
+  color: white;
+  margin: 2px;
 }
 
 .content__card-link_current {
